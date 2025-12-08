@@ -1,4 +1,4 @@
-{% set version = '1.0' %}
+{% set version = "1.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/knn.covertree_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/knn.covertree/knn.covertree_{{ version }}.tar.gz
-  sha256: 7fbfd7f2a6366392c7368fd282eba16b5ab0546f603559eac147f3e679654e57
+  sha256: 46d99e34f8793ce32cb07ae862156f6f4842ca8b9aa724488a4d627f723b19cd
 
 build:
-  number: 5
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -49,9 +49,7 @@ test:
 about:
   home: https://github.com/flying-sheep/knn.covertree
   license: AGPL-3.0-only
-  summary: Similarly to the 'FNN' package, this package allows calculation of the k nearest neighbors
-    (kNN) of a data matrix. The implementation is based on cover trees introduced by
-    Alina Beygelzimer, Sham Kakade, and John Langford (2006) <doi:10.1145/1143844.1143857>.
+  summary: Similarly to the 'FNN' package, this package allows calculation of the k nearest neighbors (kNN) of a data matrix. The implementation is based on cover trees introduced by Alina Beygelzimer, Sham Kakade, and John Langford (2006) <doi:10.1145/1143844.1143857>.
   license_family: AGPL
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/AGPL-3'
